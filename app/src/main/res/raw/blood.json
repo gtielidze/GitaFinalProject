@@ -1,0 +1,165 @@
+{
+  "bloods": [
+    {
+      "name": "Giorgi Razmadze",
+      "blood group": "A+",
+      "mobile number": "511223355",
+      "location": "Tbilisi",
+      "last blood donated date": "22/03/2020",
+      "weight": "87"
+    },
+    {
+      "name": "Ioseb Shalamberidze",
+      "blood group": "B+",
+      "mobile number": "522223235",
+      "location": "Tbilisi",
+      "last blood donated date": "25/05/2021",
+      "weight": "90"
+    },
+    {
+      "name": "Nana Vakhtangishvili",
+      "blood group": "AB+",
+      "mobile number": "5553442355",
+      "location": "Telavi",
+      "last blood donated date": "15/05/2022",
+      "weight": "65"
+    },
+    {
+      "name": "Iakob Leluashvili",
+      "blood group": "A+",
+      "mobile number": "511223355",
+      "location": "Tbilisi",
+      "last blood donated date": "22/03/2020",
+      "weight": "85"
+    },
+    {
+      "name": "Valerian Tsaava",
+      "blood group": "A-",
+      "mobile number": "566332168",
+      "location": "Zugdidi",
+      "last blood donated date": "02/03/2018",
+      "weight": "102"
+    },
+    {
+      "name": "Mariam Bibiluri",
+      "blood group": "O+",
+      "mobile number": "588993344",
+      "location": "Gori",
+      "last blood donated date": "28/07/2020",
+      "weight": "58"
+    },
+    {
+      "name": "Lela Nishnianidze",
+      "blood group": "AB+",
+      "mobile number": "512903949",
+      "location": "Tbilisi",
+      "last blood donated date": "22/03/2017",
+      "weight": "63"
+    },
+    {
+      "name": "Nikoloz Iosava",
+      "blood group": "O-",
+      "mobile number": "533432323",
+      "location": "Tbilisi",
+      "last blood donated date": "18/02/2022",
+      "weight": "77"
+    },
+    {
+      "name": "Darejan Osipovi",
+      "blood group": "AB+",
+      "mobile number": "500332211",
+      "location": "Marneuli",
+      "last blood donated date": "15/03/2016",
+      "weight": "75"
+    },
+    {
+      "name": "Koba Avatesiani",
+      "blood group": "A+",
+      "mobile number": "511225687",
+      "location": "Tbilisi",
+      "last blood donated date": "11/09/2015",
+      "weight": "95"
+    },
+    {
+      "name": "Nino Durglishvili",
+      "blood group": "B-",
+      "mobile number": "512376458",
+      "location": "Kutaisi",
+      "last blood donated date": "29/08/2009",
+      "weight": "59"
+    },
+    {
+      "name": "Giga Gagnidze",
+      "blood group": "A+",
+      "mobile number": "513355663",
+      "location": "Vani",
+      "last blood donated date": "11/06/2013",
+      "weight": "94"
+    },
+    {
+      "name": "Lukhum Liparteliani",
+      "blood group": "AB+",
+      "mobile number": "590232356",
+      "location": "Mestia",
+      "last blood donated date": "30/07/2011",
+      "weight": "81"
+    }
+  ,
+    {
+      "name": "Anna Dadiani",
+      "blood group": "AB-",
+      "mobile number": "590223566",
+      "location": "Batumi",
+      "last blood donated date": "12/04/2016",
+      "weight": "55"
+    },
+    {
+      "name": "Linda Nasaridze",
+      "blood group": "B+",
+      "mobile number": "590889933",
+      "location": "Kaspi",
+      "last blood donated date": "21/12/2018",
+      "weight": "66"
+    },
+    {
+      "name": "Davit Davituliani",
+      "blood group": "A-",
+      "mobile number": "587453245",
+      "location": "Tbilisi",
+      "last blood donated date": "17/07/2012",
+      "weight": "89"
+    },
+    {
+      "name": "Varlam Abuselidze",
+      "blood group": "A+",
+      "mobile number": "544323567",
+      "location": "Khulo",
+      "last blood donated date": "08/05/2014",
+      "weight": "75"
+    },
+    {
+      "name": "Nino Kechkhuashvili",
+      "blood group": "A-",
+      "mobile number": "589320948",
+      "location": "Adigeni",
+      "last blood donated date": "26/01/2017",
+      "weight": "56"
+    },
+    {
+      "name": "Raisa Ivanovi",
+      "blood group": "B-",
+      "mobile number": "543678943",
+      "location": "Gurjaani",
+      "last blood donated date": "24/10/2018",
+      "weight": "68"
+    },
+    {
+      "name": "Giorgi Babutsidze",
+      "blood group": "O-",
+      "mobile number": "566992309",
+      "location": "Kareli",
+      "last blood donated date": "18/11/2015",
+      "weight": "99"
+    }
+  ]
+}
