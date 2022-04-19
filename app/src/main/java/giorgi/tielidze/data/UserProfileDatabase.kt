@@ -8,7 +8,6 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import giorgi.tielidze.R
-import giorgi.tielidze.TimesConverter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -61,10 +60,6 @@ abstract class UserProfileDatabase : RoomDatabase() {
                                         CoroutineScope(Dispatchers.IO).launch{ fillWithDemoData(context) }
                                 }
                             }).build()
-//                        val dao: UserProfileDao =
-//                            getInstance(context).UserProfileDao()
-//                        dao.getSmiley()
-//                        Log.d(TAG, "getInstance: ")
                     }
                 }
             }
@@ -78,7 +73,6 @@ abstract class UserProfileDatabase : RoomDatabase() {
             try {
                 for (i in 0 until userProfile!!.length()) {
                     val item = userProfile.getJSONObject(i)
-                    val converter = TimesConverter()
                     dao.insert(
                         UserProfile(
                             item.getString("name"),
@@ -86,7 +80,6 @@ abstract class UserProfileDatabase : RoomDatabase() {
                             item.getString("mobile number"),
                             item.getString("location"),
                             item.getString("last blood donated date"),
-                            //converter.fromTimestamp(Integer.valueOf(item.getString("last blood donated date")).toLong()),
                             Integer.valueOf(item.getString("weight"))
                         )
                     )

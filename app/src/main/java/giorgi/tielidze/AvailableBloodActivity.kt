@@ -41,7 +41,7 @@ class AvailableBloodActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.sortByDate -> {
-                //sortByDate()
+                sortByDate()
                 true
             }
             R.id.sortByWeight -> {
@@ -67,11 +67,11 @@ class AvailableBloodActivity : AppCompatActivity() {
         }
     }
 
-    fun sortByDate() {
-
-
+    private fun sortByDate() {
+        viewModel.itemsInLiveDataByDate.observe(this) {
+            userProfileAdapter.submitData(lifecycle, it)
+        }
 
     }
-
 
 }

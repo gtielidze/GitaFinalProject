@@ -1,12 +1,10 @@
 package giorgi.tielidze.data
 
+
 import androidx.annotation.Keep
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverters
 import com.google.gson.annotations.SerializedName
-import giorgi.tielidze.TimesConverter
-import java.sql.Date
 
 
 @Entity(tableName = "blood_base")
@@ -22,8 +20,6 @@ data class UserProfile(
     var location: String,
     @SerializedName("last blood donated date")
     var lastDonatedDate: String,
-//    @TypeConverters(TimesConverter::class)
-//    var lastDonatedDate: Date? = null,
     @SerializedName("weight")
     var weight: Int,
     @PrimaryKey(autoGenerate = true)

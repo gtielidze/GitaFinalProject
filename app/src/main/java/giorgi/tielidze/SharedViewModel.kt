@@ -9,9 +9,6 @@ import giorgi.tielidze.data.UserProfile
 import giorgi.tielidze.data.UserProfileDao
 import giorgi.tielidze.data.UserProfileDatabase
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.forEach
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class SharedViewModel(app: Application) : AndroidViewModel(app) {
@@ -23,17 +20,18 @@ class SharedViewModel(app: Application) : AndroidViewModel(app) {
     val items: Flow<PagingData<UserProfile>> = Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
         dao.getAll()!!
     }.flow
+        .cachedIn(viewModelScope)
 
     val itemsInLiveData:LiveData<PagingData<UserProfile>> = Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
         dao.getAllByWeight()!!
     }.liveData
+        .cachedIn(viewModelScope)
 
 
-//    val itemsInLiveDataByDate:LiveData<PagingData<UserProfile>> = Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
-//        dao.getAllByDate()!!
-//    }.liveData
-
-
+    val itemsInLiveDataByDate:LiveData<PagingData<UserProfile>> = Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
+        dao.getAllByDate()!!
+    }.liveData
+        .cachedIn(viewModelScope)
 
 
     fun insert(userProfile: UserProfile) {
@@ -41,6 +39,5 @@ class SharedViewModel(app: Application) : AndroidViewModel(app) {
             dao.insert(userProfile)
         }
     }
-
 
 }

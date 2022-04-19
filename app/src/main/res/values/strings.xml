@@ -10,5 +10,6 @@
     <string name="db_name">bloodBank</string>
     <string name="sort_by_weight">Sort by Weight</string>
     <string name="sort_by_date">Sort by Date</string>
+    <string name="see_blood_base">see blood base</string>
 
 </resources>
