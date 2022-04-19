@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    tools:context=".AvailableBloodActivity">
+
+    <TextView
+        android:id="@+id/txtNameItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/name" />
+
+    <TextView
+        android:id="@+id/txtBloodGroupItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/blood_group"
+        android:minHeight="30dp"
+        android:textColorHint="#757575" />
+
+    <TextView
+        android:id="@+id/txtWeightItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/weight" />
+
+    <TextView
+        android:id="@+id/txtMobileNumberItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/mobile_number" />
+
+    <TextView
+        android:id="@+id/txtLocationItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/location" />
+
+    <TextView
+        android:id="@+id/txtLastDonatedDateItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/last_blood_donated_date" />
+
+
+</LinearLayout>
