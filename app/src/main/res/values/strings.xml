@@ -7,4 +7,6 @@
     <string name="mobile_number">Mobile number</string>
     <string name="blood_group">Blood group</string>
     <string name="add_personal_data">add personal data</string>
+    <string name="db_name">bloodBank</string>
+
 </resources>

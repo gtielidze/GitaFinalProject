@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBloodGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/blood_group"
+        android:minHeight="30dp"
+        android:textColorHint="#757575" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/weight" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/mobile_number" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:textColorHint="#757575"
+        tools:text="@string/location" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtLastDonatedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:minHeight="45dp"
+        android:textColorHint="#757575"
+        tools:text="@string/last_blood_donated_date" />
+
+
+</LinearLayout>
