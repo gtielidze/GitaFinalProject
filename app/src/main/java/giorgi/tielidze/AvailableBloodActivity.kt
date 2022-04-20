@@ -52,23 +52,30 @@ class AvailableBloodActivity : AppCompatActivity() {
         }
     }
 
-    //data in flow
+//    //data in flow
+//    private fun initialData() {
+//        lifecycleScope.launch {
+//            viewModel.items.collectLatest {
+//                userProfileAdapter.submitData(it)
+//            }
+//        }
+//    }
+
     private fun initialData() {
-        lifecycleScope.launch {
-            viewModel.items.collectLatest {
-                userProfileAdapter.submitData(it)
-            }
+        viewModel.getPager("default").observe(this) {
+            userProfileAdapter.submitData(lifecycle, it)
         }
     }
+
     //data in livedata
     private fun sortByWeight() {
-        viewModel.itemsInLiveData.observe(this) {
+        viewModel.getPager("by weight").observe(this) {
             userProfileAdapter.submitData(lifecycle, it)
         }
     }
 
     private fun sortByDate() {
-        viewModel.itemsInLiveDataByDate.observe(this) {
+        viewModel.getPager("by date").observe(this) {
             userProfileAdapter.submitData(lifecycle, it)
         }
 

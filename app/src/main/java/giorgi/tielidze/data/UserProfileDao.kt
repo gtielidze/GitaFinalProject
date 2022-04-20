@@ -13,11 +13,10 @@ interface UserProfileDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(userProfile: UserProfile)
 
-
-    @Query("SELECT * FROM BLOOD_BASE ORDER BY id ASC")
+    @Query("SELECT * FROM blood_base ORDER BY id ASC")
     fun getAll(): PagingSource<Int, UserProfile>?
 
-    @Query("SELECT * FROM BLOOD_BASE ORDER BY weight ASC")
+    @Query("SELECT * FROM blood_base ORDER BY weight ASC")
     fun getAllByWeight(): PagingSource<Int, UserProfile>?
 
     @Query("SELECT * FROM blood_base ORDER BY lastDonatedDate ASC")

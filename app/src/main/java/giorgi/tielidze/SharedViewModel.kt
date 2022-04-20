@@ -2,13 +2,14 @@ package giorgi.tielidze
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import androidx.paging.*
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.cachedIn
+import androidx.paging.liveData
 import giorgi.tielidze.data.UserProfile
 import giorgi.tielidze.data.UserProfileDao
 import giorgi.tielidze.data.UserProfileDatabase
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class SharedViewModel(app: Application) : AndroidViewModel(app) {
@@ -17,22 +18,23 @@ class SharedViewModel(app: Application) : AndroidViewModel(app) {
         UserProfileDatabase.getInstance(app.applicationContext).UserProfileDao()
 
 
-    val items: Flow<PagingData<UserProfile>> = Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
-        dao.getAll()!!
-    }.flow
-        .cachedIn(viewModelScope)
-
-    val itemsInLiveData:LiveData<PagingData<UserProfile>> = Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
-        dao.getAllByWeight()!!
-    }.liveData
-        .cachedIn(viewModelScope)
+//    val items: Flow<PagingData<UserProfile>> =
+//        Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
+//            dao.getAll()!!
+//        }.flow
+//            .cachedIn(viewModelScope)
 
 
-    val itemsInLiveDataByDate:LiveData<PagingData<UserProfile>> = Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
-        dao.getAllByDate()!!
-    }.liveData
-        .cachedIn(viewModelScope)
-
+    fun getPager(query: String) =
+        Pager(PagingConfig(pageSize = 10, enablePlaceholders = true, maxSize = 200)) {
+            when (query) {
+                "by weight" -> dao.getAllByWeight()!!
+                "by date" -> dao.getAllByDate()!!
+                else -> {
+                    dao.getAllByDate()!!
+                }
+            }
+        }.liveData.cachedIn(viewModelScope)
 
     fun insert(userProfile: UserProfile) {
         viewModelScope.launch {

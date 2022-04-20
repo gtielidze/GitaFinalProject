@@ -34,12 +34,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun addInDatabase() {
         val userProfile = UserProfile(
-            name = binding.txtName.text.toString() ?: "",
-            bloodGroup = binding.txtBloodGroup.text.toString() ?: "",
-            mobileNumber = binding.txtMobileNumber.text.toString() ?: "",
-            location = binding.txtLocation.text.toString() ?: "",
-            lastDonatedDate = binding.txtLastDonatedDate.text.toString() ?: "",
-            weight = Integer.valueOf(binding.txtWeight.text.toString()) ?: 55
+            name = binding.txtName.text.toString(),
+            bloodGroup = binding.txtBloodGroup.text.toString(),
+            mobileNumber = binding.txtMobileNumber.text.toString(),
+            location = binding.txtLocation.text.toString(),
+            lastDonatedDate = binding.txtLastDonatedDate.text.toString(),
+            weight = Integer.parseInt(binding.txtWeight.text.toString())
         )
         viewModel.insert(userProfile)
     }
