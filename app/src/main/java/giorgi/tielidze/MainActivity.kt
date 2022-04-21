@@ -2,6 +2,7 @@ package giorgi.tielidze
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import giorgi.tielidze.data.UserProfile
@@ -19,8 +20,10 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnAdd.setOnClickListener {
-            addInDatabase()
-            nextActivity()
+            if (checkAllFields()) {
+                addInDatabase()
+                nextActivity()
+            }
         }
         binding.btnSeeBase.setOnClickListener {
             nextActivity()
@@ -33,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addInDatabase() {
+
         val userProfile = UserProfile(
             name = binding.txtName.text.toString(),
             bloodGroup = binding.txtBloodGroup.text.toString(),
@@ -42,6 +46,22 @@ class MainActivity : AppCompatActivity() {
             weight = Integer.parseInt(binding.txtWeight.text.toString())
         )
         viewModel.insert(userProfile)
+
+    }
+
+    private fun checkAllFields(): Boolean {
+        return if (binding.txtWeight.text.toString()
+                .isEmpty() || binding.txtBloodGroup.text.toString()
+                .isEmpty() || binding.txtBloodGroup.text.toString()
+                .isEmpty() || binding.txtLocation.text.toString()
+                .isEmpty() || binding.txtMobileNumber.text.toString()
+                .isEmpty() || binding.txtName.text.toString().isEmpty()
+        ) {
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            false
+        } else {
+            true
+        }
     }
 
 }

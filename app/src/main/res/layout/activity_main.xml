@@ -108,6 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
         android:hint="@string/last_blood_donated_date"
+        
         android:inputType="date"
         app:startIconDrawable="@drawable/ic_date"
         app:layout_constraintLeft_toLeftOf="parent"
